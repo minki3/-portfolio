@@ -25,7 +25,7 @@ jobs:
           aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${{ secrets.ECR_REGISTRY }}
 
       - name: Build, Tag, and Push Docker image
-        working-directory: PORTFOLIO
+        working-directory: portfolio
         run: |
           docker build -f ./Dockerfile -t ${{ secrets.ECR_REPOSITORY }} .
           docker tag ${{ secrets.ECR_REPOSITORY }}:latest ${{ secrets.ECR_REGISTRY }}/${{ secrets.ECR_REPOSITORY }}:latest
