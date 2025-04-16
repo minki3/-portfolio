@@ -16,8 +16,9 @@ WORKDIR /app
 COPY --from=builder /app ./
 
 ENV NODE_ENV=production
-ENV PORT=3000
+ENV PORT=80
 
-EXPOSE 3000
+EXPOSE 80
 
-CMD ["npm", "run", "start"]
+# 🔥 $PORT 환경변수 적용되도록 쉘 실행 방식으로 변경
+CMD npm run start
