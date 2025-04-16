@@ -20,5 +20,4 @@ ENV PORT=80
 
 EXPOSE 80
 
-# 🔥 $PORT 환경변수 적용되도록 쉘 실행 방식으로 변경
-CMD ["npm", "start", "-H", "0.0.0.0", "-p", "80"]
+CMD ["npm", "start"]
