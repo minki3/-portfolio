@@ -32,4 +32,4 @@ jobs:
 
       - name: Deploy to ECS
         run: |
-          aws ecs update-service --cluster portfolio --service portfolio-service --force-new-deployment
+          aws ecs update-service --cluster portfolio --service portfolio-service2 --force-new-deployment
